@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title>Tip Calculator App</title>
+  </head>
+  <body>
+    <main class="main">
+      <img
+        class="logo-splitter"
+        src="/assets/images/logo.svg"
+        alt="logo SPLITTER"
+        width="86.66"
+        height="53.14"
+      />
+      <section class="bill-container bg-white">
+        <section class="main-container">
+          <form action="">
+            <section class="bill-section">
+              <div class="field">
+                <div class="field-header">
+                  <label
+                    for="input-bill"
+                    class="field-bill textPreset-5 text-grey-550"
+                    >Bill</label
+                  >
+                  <span
+                    hidden
+                    id="errorMsg"
+                    class="field-error-msg textPreset-5 text-orange-400"
+                    >Can't be zero</span
+                  >
+                </div>
+                <div class="input-wrapper">
+                  <img
+                    class="input-icon"
+                    src="/assets/images/icon-dollar.svg"
+                    alt="icono dollar"
+                    width="9.84"
+                    height="15.46"
+                  />
+                  <input
+                    type="number"
+                    id="input-bill"
+                    class="input-field textPreset-3"
+                    placeholder="0"
+                    aria-invalid="false"
+                  />
+                </div>
+              </div>
+
+              <div class="tip-selection-container">
+                <p class="textPreset-5 text-grey-600">Select Tip %</p>
+                <div class="btn-container">
+                  <button
+                    id="btn5"
+                    class="btn-tip btn-default textPreset-3"
+                    type="button"
+                    aria-pressed="false"
+                    data-percent="5"
+                  >
+                    5%
+                  </button>
+                  <button
+                    id="btn10"
+                    class="btn-tip btn-default textPreset-3"
+                    type="button"
+                    aria-pressed="false"
+                    data-percent="10"
+                  >
+                    10%
+                  </button>
+                  <button
+                    id="btn15"
+                    class="btn-tip btn-default textPreset-3"
+                    type="button"
+                    aria-pressed="false"
+                    data-percent="15"
+                  >
+                    15%
+                  </button>
+                  <button
+                    id="btn25"
+                    class="btn-tip btn-default textPreset-3"
+                    type="button"
+                    aria-pressed="false"
+                    data-percent="25"
+                  >
+                    25%
+                  </button>
+                  <button
+                    id="btn50"
+                    class="btn-tip btn-default textPreset-3"
+                    type="button"
+                    aria-pressed="false"
+                    data-percent="50"
+                  >
+                    50%
+                  </button>
+                  <input
+                    id="custom-tip"
+                    type="text"
+                    placeholder="Custom"
+                    class="custom-tip textPreset-3"
+                    aria-pressed="false"
+                  />
+                </div>
+              </div>
+
+              <div class="people-container">
+                <div class="field people-content">
+                  <div class="field-header">
+                    <label
+                      for="input-people"
+                      class="field-bill textPreset-5 text-grey-550"
+                      >Number of People</label
+                    >
+                    <span
+                      id="personError"
+                      hidden
+                      class="field-error-msg textPreset-5 text-orange-400"
+                      >Can't be zero</span
+                    >
+                  </div>
+                  <div class="input-wrapper">
+                    <img
+                      class="input-icon"
+                      src="/assets/images/icon-person.svg"
+                      alt="icono dollar"
+                      width="9.84"
+                      height="15.46"
+                    />
+                    <input
+                      type="number"
+                      id="input-people"
+                      class="input-field textPreset-3"
+                      placeholder="0"
+                      aria-invalid="false"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <section class="result-section bg-green-900">
+            <div class="result-container">
+              <div class="result-details">
+                <div class="tip-content tip-amount-container">
+                  <div class="tip-amount-text">
+                    <p class="tip-amount-title textPreset-5 text-white">
+                      Tip Amount
+                    </p>
+                    <p
+                      class="tip-amount-description textPreset-6 text-grey-400"
+                    >
+                      / person
+                    </p>
+                  </div>
+
+                  <div class="tip-amount-total">
+                    <span class="textPreset-1 textPreset-2 text-green-400"
+                      >$</span
+                    >
+                    <p
+                      id="tip-amount-person"
+                      class="tip-number textPreset-1 textPreset-2 text-green-400"
+                    >
+                      0.00
+                    </p>
+                  </div>
+                </div>
+                <div class="tip-content total-amount-container">
+                  <div class="tip-amount-text">
+                    <p class="tip-amount-title textPreset-5 text-white">
+                      Total
+                    </p>
+                    <p
+                      class="tip-amount-description textPreset-6 text-grey-400"
+                    >
+                      / person
+                    </p>
+                  </div>
+                  <div class="tip-amount-total">
+                    <span class="textPreset-1 textPreset-2 text-green-400"
+                      >$</span
+                    >
+                    <p
+                      id="total-person"
+                      class="tip-number textPreset-1 textPreset-2 text-green-400"
+                    >
+                      0.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-reset-container">
+                <button
+                  id="btn-reset"
+                  class="btn-reset textPreset-4 bg-green-400 text-green-900"
+                  type="submit"
+                >
+                  RESET
+                </button>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="/scripts/index.js" type="module"></script>
+  </body>
+</html>

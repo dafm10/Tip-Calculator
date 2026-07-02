@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  background-color: var(--grey-200);
+  font-family: "Space Mono", monospace;
+}
+.main {
+  padding-top: var(--spacing-600);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-500);
+
+  @media screen and (min-width: 48rem) {
+    gap: var(--spacing-1000);
+  }
+
+  @media screen and (min-width: 90rem) {
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+.logo-splitter {
+  object-fit: contain;
+
+  @media screen and (min-width: 90rem) {
+    margin-top: 0;
+  }
+}
+
+.bill-container {
+  width: 100%;
+  padding: var(--spacing-400) var(--spacing-300);
+  border-radius: var(--spacing-300) var(--spacing-300) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+
+    @media screen and (min-width: 90rem) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: var(--spacing-600);
+    }
+  }
+
+  .bill-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+
+    @media screen and (min-width: 90rem) {
+      width: 23.6875rem;
+      gap: var(--spacing-500);
+    }
+  }
+
+  .tip-selection-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+  }
+
+  @media screen and (min-width: 48rem) {
+    max-width: 38rem;
+    padding: var(--spacing-600) var(--spacing-1000);
+  }
+
+  @media screen and (min-width: 90rem) {
+    max-width: 57.5rem;
+    width: fit-content;
+    height: 30.6875rem;
+    padding: var(--spacing-400);
+  }
+}
+
+.result-section {
+  padding: var(--spacing-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  border-radius: var(--spacing-200);
+
+  .result-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+
+    .result-details {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-300);
+
+      .tip-content {
+        display: flex;
+        justify-content: space-between;
+        gap: auto;
+        align-items: center;
+
+        .tip-amount-total {
+          display: flex;
+        }
+      }
+    }
+
+    @media screen and (min-width: 90rem) {
+      gap: var(--spacing-1600);
+    }
+  }
+
+  @media screen and (min-width: 90rem) {
+    width: 25.8125rem;
+    height: 26.0625rem;
+    padding-top: var(--spacing-400);
+    padding-bottom: var(--spacing-400);
+  }
+}

@@ -1,0 +1,60 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .field-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* .field-error-msg {
+      display: none;
+    } */
+  }
+
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .input-icon {
+      position: absolute;
+      left: 1rem;
+      pointer-events: none;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: var(--spacing-100) var(--spacing-200);
+      text-align: right;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      background-color: var(--grey-50);
+      color: var(--green-900);
+      cursor: pointer;
+    }
+
+    .input-field::placeholder {
+      color: var(--grey-300);
+      opacity: 1;
+    }
+  }
+
+  .input-wrapper:focus-within .input-field {
+    border-color: var(--green-400);
+    border-width: 2px;
+  }
+
+  .input-field:focus {
+    outline: none;
+  }
+
+  /* .input-field[aria-invalid="true"] {
+    border-color: var(--orange-400);
+  } */
+
+  /* .field:has(.input-field[aria-invalid="true"]) .field-error-msg {
+    display: block;
+  } */
+}
